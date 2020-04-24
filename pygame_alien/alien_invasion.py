@@ -1,14 +1,14 @@
 # # 12.1 游戏规划
 # # 12.2 安装
 # # 12.3.1 创建Pygame窗口，相应用户输入
-# import sys
-# import pygame
-#
-# def run_game():
-#
-#     pygame.init()
-#     pygame.display.set_caption("Alien Invasion")
-#     screen = pygame.display.set_mode((1200, 800))
+import sys
+import pygame
+
+def run_game():
+
+    pygame.init()
+    pygame.display.set_caption("Alien Invasion")
+    screen = pygame.display.set_mode((1200, 800))
 #
 #     while True:
 #
