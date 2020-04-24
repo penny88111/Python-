@@ -7,8 +7,8 @@ import pygame
 def run_game():
 
     pygame.init()
-    pygame.display.set_caption("Alien Invasion")
-    screen = pygame.display.set_mode((1200, 800))
+    pygame.display.set_caption("Alien Invasion")  # 设置标题
+    screen = pygame.display.set_mode((1200, 800)) # 屏幕大小
 
     while True:
 
@@ -16,11 +16,10 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-        pygame.display.flip()
+        pygame.display.flip() #显示到屏幕上
 
 run_game()
 #
-# #
 
 # # 12.3.2 设置背景色
 #
