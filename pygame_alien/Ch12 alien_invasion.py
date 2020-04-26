@@ -4,16 +4,16 @@
 import sys
 import pygame
 
-def run_game():
+def run_game():  #整个流程定义为 run_game(),最后执行run_game()
 
-    pygame.init()
-    pygame.display.set_caption("Alien Invasion")  # 设置标题
-    screen = pygame.display.set_mode((1200, 800)) # 屏幕大小
+    pygame.init() #初始化
+    pygame.display.set_caption("Alien Invasion")  # 1. 设置标题
+    screen = pygame.display.set_mode((1200, 800)) # 2. 屏幕大小
 
-    while True:
+    while True: #主循环
 
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT: #退出
                 sys.exit()
 
         pygame.display.flip() #显示到屏幕上
@@ -32,7 +32,7 @@ def run_game():
     pygame.display.set_caption("Alien Invasion")
 
     # 设置背景色
-    bg_color = (230, 230, 230)
+    bg_color = (230, 230, 230) #初始颜色设置
 
     while True:
 
@@ -99,7 +99,7 @@ def run_game():
 
     pygame.display.set_caption("Alien Invasion")
 
-    # 创建一艘飞船
+    # 创建一艘飞船 ???
     ship = Ship(screen)
 
     while True:
