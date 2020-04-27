@@ -7,7 +7,7 @@ class Settings():
         """初始化游戏的设置"""
         # 屏幕设置
         self.screen_width = 900
-        self.screen_heigh = 600
+        self.screen_height = 600
         self.bg_color = (230, 230, 230)
 
 # 12.6.4调整飞船的速度
@@ -19,7 +19,7 @@ class Settings():
         """初始化游戏的设置"""
 
         self.screen_width = 900
-        self.screen_heigh = 600
+        self.screen_height = 600
         self.bg_color = (230, 230, 230)
 
         # 飞船的速度
