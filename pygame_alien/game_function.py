@@ -21,8 +21,7 @@
 #     pygame.display.flip()
 #
 # # 12.6.1 相应按键 KEYDOWN
-#
-# import sys
+
 # import pygame
 #
 # def check_events(ship): # 这里要加一个变量ship
@@ -47,7 +46,7 @@
 #
 # # 12.6.2 相应按键 KEYDOWN
 #
-# import sys
+
 # import pygame
 #
 # def check_events(ship):
