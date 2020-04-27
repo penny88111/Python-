@@ -10,7 +10,7 @@
 #
 #         # 加载飞船图像并获取其他外接矩形
 #         # self.image = pygame.image.load('images/ship.bmp')
-#         self.image = pygame.image.load(r'D:\PYTHON练习\pygame_alien\ship_3.png')
+#         self.image = pygame.image.load(r'E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12\images\ship.bmp')
 #         self.rect = self.image.get_rect()
 #         self.screen_rect = screen.get_rect()
 #
@@ -33,7 +33,7 @@
 #         self.screen = screen
 #
 #         # self.image = pygame.image.load('images/ship.bmp')
-#         self.image = pygame.image.load(r'D:\PYTHON练习\pygame_alien\ship_3.png')
+#         self.image = pygame.image.load(r'E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12\images\ship.bmp')
 #         self.rect = self.image.get_rect()
 #         self.screen_rect = screen.get_rect()
 #
@@ -62,8 +62,8 @@
 #         """初始化飞船并设置其初始位置"""
 #         self.screen = screen
 #
-#         # self.image = pygame.image.load('images/ship.bmp')
-#         self.image = pygame.image.load(r'D:\PYTHON练习\pygame_alien\ship_3.png')
+#         #self.image = pygame.image.load('images/ship.bmp')
+#         self.image = pygame.image.load(r'E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12\images\ship.bmp')
 #         self.rect = self.image.get_rect()
 #         self.screen_rect = screen.get_rect()
 #
@@ -78,7 +78,7 @@
 #         """根据移动标志调整飞船的位置"""
 #         if self.moving_right:
 #             self.rect.centerx += 1
-#         if self.moving_left:
+#         if self.moving_left:       #向左
 #             self.rect.centerx -= 1
 #
 #     def blitme(self):
@@ -97,7 +97,7 @@
 #         self.ai_settings = ai_settings
 #
 #         # self.image = pygame.image.load('images/ship.bmp')
-#         self.image = pygame.image.load(r'D:\PYTHON练习\pygame_alien\ship_3.png')
+#         self.image = pygame.image.load(r'E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12\images\ship.bmp')
 #         self.rect = self.image.get_rect()
 #         self.screen_rect = screen.get_rect()
 #
@@ -125,7 +125,9 @@
 #
 #         self.screen.blit(self.image, self.rect)
 
+
 # 12.6.5 限制移动范围
+
 # #self.screen_rect.rigt，x轴最左边
 
 import pygame
@@ -138,7 +140,7 @@ class Ship():
         self.ai_settings = ai_settings
 
         # self.image = pygame.image.load('images/ship.bmp')
-        self.image = pygame.image.load(r'D:\PYTHON练习\pygame_alien\ship_3.png')
+        self.image = pygame.image.load(r'E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12\images\ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
