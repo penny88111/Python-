@@ -189,11 +189,13 @@ def run_game():
 run_game()
 
 # 12.6.1 响应按键 game_function.py修改
+import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
 from settings import Settings
 from ship import Ship
-import game_function as gf
+import game_functions as gf
 
 def run_game():
     pygame.init()
@@ -213,11 +215,13 @@ def run_game():
 run_game()
 
 # 12.6.2 允许不断移动 改ship.py
+import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
 from settings import Settings
 from ship import Ship
-import game_function as gf
+import game_functions as gf
 
 def run_game():
     pygame.init()
@@ -229,7 +233,7 @@ def run_game():
     pygame.display.set_caption("Alien Invasion")
 
 
-    ship = Ship(ai_settings, screen)
+    ship = Ship(screen)
 
     while True:
         gf.check_events(ship)
@@ -238,7 +242,6 @@ def run_game():
         gf.update_screen(ai_settings,screen,ship)
 
 run_game()
-
 # 此时运行，可以按住右键一直向右移动
 
 12.6.3 左右移动
