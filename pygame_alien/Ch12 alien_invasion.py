@@ -1,7 +1,7 @@
 # 12.1 游戏规划
 # 12.2 安装
 # 12.3.1 创建Pygame窗口，相应用户输入
-import sys
+import sys  #用来 搜索模块
 import pygame
 
 def run_game():  #整个流程定义为 run_game(),最后执行run_game()
@@ -51,16 +51,17 @@ run_game()
 # 12.3.3创建设置类
 
 import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
-from settings import Settings
+from settings import Settings     #插入设置 class Settings()
 
 def run_game():
     pygame.init()
-    ai_settings = Settings()
-    screen = pygame.display.set_mode(
+    ai_settings = Settings()            # class Settings()
+    screen = pygame.display.set_mode(        
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -72,7 +73,7 @@ def run_game():
                 sys.exit()
 
         # 每次循环时都重绘屏幕
-        screen.fill(ai_settings.bg_color)
+        screen.fill(ai_settings.bg_color)     # class Settings()中
 
         pygame.display.flip()
 
@@ -83,11 +84,12 @@ run_game()
 # 12.4.2 在屏幕上绘制飞船
 
 import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
 from settings import Settings
 # 导入ship类
-from ship import Ship
+from ship import Ship   # 创建ship
 
 
 def run_game():
@@ -95,12 +97,12 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
-    # 创建一艘飞船 ???
-    ship = Ship(screen)
+    # 创建一艘飞船 
+    ship = Ship(screen)  # 创建飞船
 
     while True:
 
@@ -119,11 +121,13 @@ run_game()
 # 12.5 重构，就是把while循环提出来
 
 # 12.5.1 新建game_funciton
+import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
 from settings import Settings
 from ship import Ship
-import game_function as gf
+import game_functions as gf
 # 导入game_funciton
 
 
@@ -132,7 +136,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -142,7 +146,7 @@ def run_game():
 
     while True:
 
-        gf.check_events()
+        gf.check_events()  #替换/退出这部分重写
 
         screen.fill(ai_settings.bg_color)
         ship.blitme()
@@ -154,11 +158,13 @@ run_game()
 
 # 12.5.2 把while里更新屏幕的功能提出去
 
+import sys
+sys.path.append("E:\python 编程：从入门到实践\《Python编程》源代码文件\chapter_12")
 import pygame
 
 from settings import Settings
 from ship import Ship
-import game_function as gf
+import game_functions as gf
 # 导入game_funciton
 
 
@@ -167,10 +173,10 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
-    bg_color = (230,230,230)
+
 
     # 创建一艘飞船
     ship = Ship(screen)
@@ -178,7 +184,7 @@ def run_game():
     while True:
 
         gf.check_events()
-        gf.update_screen(ai_settings,screen,ship)
+        gf.update_screen(ai_settings,screen,ship)  # / 屏幕的功能重写
 
 run_game()
 
@@ -194,7 +200,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -218,7 +224,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -254,7 +260,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -293,7 +299,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
 
@@ -325,7 +331,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,
-         ai_settings.screen_heigh))
+         ai_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
     bg_color = (230,230,230)
